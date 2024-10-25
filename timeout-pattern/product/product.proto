@@ -1,0 +1,15 @@
+syntax = "proto3";
+option go_package="huynhminhtruong/go-microservice-resiliency-patterns/product";
+
+message GetProductRequest {
+  int32 product_id = 1;
+}
+
+
+message GetProductResponse {
+  string title = 1;
+}
+
+service ProductService {
+  rpc Get(GetProductRequest) returns (GetProductResponse){}
+}
